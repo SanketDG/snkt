@@ -12,8 +12,14 @@ import Header from "../components/header"
 const IndexPage = () => (
   <Styled.root data-testid="theme-root">
       <SEO title="Home" />
-      <Header siteTitle="SanketDG" />
+      <Header />
       <Layout>
+        <h1>Hi.</h1>
+
+        <h2>I am Sanket.</h2>
+      {/* <Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
+        Hi.
+      </Text> */}
         <Hero />
       </Layout>
   </Styled.root>

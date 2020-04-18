@@ -5,28 +5,79 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      marginBottom: `1.45rem`,
+      marginBottom: `0rem`,
     }}
   >
-    <div
+    <nav
       style={{
+        display: "flex",
+        justifyContent: "space-around",
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `2rem 1.0875rem`,
+        width: "50%"
       }}
     >
-      <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          to="/projects"
           style={{
             color: `#2d3748`,
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          projects
         </Link>
-      </h1>
-    </div>
+      <Link
+        to="/projects"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+          paddingLeft: `1.5rem`
+        }}
+      >
+        resume
+        </Link>
+      <Link
+        to="/projects"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+          paddingLeft: `1.5rem`
+        }}
+      >
+        blog
+        </Link>
+      <Link
+        to="/projects"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+          paddingLeft: `1.5rem`
+        }}
+      >
+        github
+        </Link>
+      <Link
+        to="/projects"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+          paddingLeft: `1.5rem`
+        }}
+      >
+        twitter
+        </Link>
+      <Link
+        to="/projects"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+          paddingLeft: `1.5rem`
+        }}
+      >
+        linkedin
+        </Link>
+    </nav>
   </header>
 )
 

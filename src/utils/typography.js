@@ -3,6 +3,4 @@ import funstonTheme from 'typography-theme-funston'
 
 const typography = new Typography(funstonTheme)
 
-typography.injectStyles()
-
 export default typography
