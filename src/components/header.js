@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => (
         resume
         </Link>
       <Link
-        to="/projects"
+        to="/blog"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,

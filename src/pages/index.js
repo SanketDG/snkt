@@ -8,6 +8,7 @@ import Hero from "../texts/Hero"
 import { Global } from "@emotion/core"
 import { Styled, Container, css } from "theme-ui"
 import Header from "../components/header"
+import BlogPostTemplate from "../templates/blogpost"
 
 const IndexPage = () => (
   <Styled.root data-testid="theme-root">
@@ -20,7 +21,9 @@ const IndexPage = () => (
       {/* <Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
         Hi.
       </Text> */}
+
         <Hero />
+
       </Layout>
   </Styled.root>
 )
