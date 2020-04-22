@@ -14,20 +14,26 @@ export default function Template({
             padding: `2rem 1.0875rem`,
             width: "80%"
         }}>
-            <div
+            <div style={{
+                paddingBottom:"0.5rem"
+            }}
 
             >
                 <p style={{
-                    fontSize: 20px;
+                    fontSize: "40px",
+                    fontWeight: "500",
+                    marginBottom: "5px"
                 }}
                 >
                     {frontmatter.title}</p>
-                <h2>Sanket | {frontmatter.date}</h2>
+                <p style={{
+                    fontSize: "20px",
+                }}>Sanket | {frontmatter.date}</p>
             </div>
-                    <div
-                        className="blog-post-content"
-                        dangerouslySetInnerHTML={{ __html: html }}
-                    />
+            <div
+                className="blog-post-content"
+                dangerouslySetInnerHTML={{ __html: html }}
+            />
         </div>
     )
 }
