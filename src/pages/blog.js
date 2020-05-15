@@ -7,55 +7,66 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
-    return (
-        <div style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `2rem 1.0875rem`,
-            width: "80%"
-        }}>
-            {/* <Bio /> */}
-            {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug
-                return (
-                    <div
-                      style={{
-                        paddingBottom: "0.5rem",
-                      }}
-                    >
-                      <p
-                        style={{
-                          fontSize: "40px",
-                          fontWeight: "500",
-                          marginBottom: "5px",
-                        }}
-                      >
-                        {title}
-                      </p>
-                      <p
-                        style={{
-                          fontSize: "20px",
-                          fontWeight: "100"
-                        }}
-                      >
-                        {node.frontmatter.date}
-                      </p>
-                      <section>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: node.frontmatter.description || node.excerpt,
-                        }}
-                      />
-                    </section>
-                    </div>
-
-                )
-            })}
-        </div>
-    )
+  return (
+    <div
+      style={{
+        margin: `0 auto`,
+        maxWidth: 960,
+        padding: `2rem 1.0875rem`,
+        width: "80%",
+      }}
+    >
+      {/* <Bio /> */}
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug
+        return (
+          <div
+            style={{
+              paddingBottom: "0.5rem",
+            }}
+          >
+            <header>
+              <p
+                style={{
+                  fontSize: "40px",
+                  fontWeight: "500",
+                  marginBottom: "5px",
+                }}
+              >
+                <Link
+                  style={{
+                    color: `#2d3748`,
+                    textDecoration: `none`,
+                  }}
+                  to={node.frontmatter.path}
+                >
+                  {title}
+                </Link>
+              </p>
+            </header>
+            <p
+              style={{
+                fontSize: "20px",
+                fontWeight: "100",
+              }}
+            >
+              {node.frontmatter.date}
+            </p>
+            <section>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </section>
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default BlogIndex
