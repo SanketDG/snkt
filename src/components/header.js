@@ -15,68 +15,78 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `2rem 1.0875rem`,
-        width: "50%"
+        width: "50%",
       }}
     >
-        <Link
-          to="/projects"
-          style={{
-            color: `#2d3748`,
-            textDecoration: `none`,
-          }}
-        >
-          projects
-        </Link>
+      <Link
+        to="/"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+        }}
+      >
+        home
+      </Link>
       <Link
         to="/projects"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`
+          paddingLeft: `1.5rem`,
+        }}
+      >
+        projects
+      </Link>
+      <Link
+        to="/projects"
+        style={{
+          color: `#2d3748`,
+          textDecoration: `none`,
+          paddingLeft: `1.5rem`,
         }}
       >
         resume
-        </Link>
+      </Link>
       <Link
         to="/blog"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`
+          paddingLeft: `1.5rem`,
         }}
       >
         blog
-        </Link>
+      </Link>
       <Link
         to="/projects"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`
+          paddingLeft: `1.5rem`,
         }}
       >
         github
-        </Link>
+      </Link>
       <Link
         to="/projects"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`
+          paddingLeft: `1.5rem`,
         }}
       >
         twitter
-        </Link>
+      </Link>
       <Link
         to="/projects"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`
+          paddingLeft: `1.5rem`,
         }}
       >
         linkedin
-        </Link>
+      </Link>
     </nav>
   </header>
 )

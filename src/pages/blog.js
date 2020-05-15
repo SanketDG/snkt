@@ -5,67 +5,71 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import Header from "../components/header"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `2rem 1.0875rem`,
-        width: "80%",
-      }}
-    >
-      {/* <Bio /> */}
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <div
-            style={{
-              paddingBottom: "0.5rem",
-            }}
-          >
-            <header>
-              <p
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "500",
-                  marginBottom: "5px",
-                }}
-              >
-                <Link
-                  style={{
-                    color: `#2d3748`,
-                    textDecoration: `none`,
-                  }}
-                  to={node.frontmatter.path}
-                >
-                  {title}
-                </Link>
-              </p>
-            </header>
-            <p
+    <>
+      <Header />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `2rem 1.0875rem`,
+          width: "80%",
+        }}
+      >
+        {/* <Bio /> */}
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <div
               style={{
-                fontSize: "20px",
-                fontWeight: "100",
+                paddingBottom: "0.5rem",
               }}
             >
-              {node.frontmatter.date}
-            </p>
-            <section>
+              <header>
+                <p
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "500",
+                    marginBottom: "5px",
+                  }}
+                >
+                  <Link
+                    style={{
+                      color: `#2d3748`,
+                      textDecoration: `none`,
+                    }}
+                    to={node.frontmatter.path}
+                  >
+                    {title}
+                  </Link>
+                </p>
+              </header>
               <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "100",
                 }}
-              />
-            </section>
-          </div>
-        )
-      })}
-    </div>
+              >
+                {node.frontmatter.date}
+              </p>
+              <section>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </section>
+            </div>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
