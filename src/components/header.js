@@ -38,7 +38,7 @@ const Header = ({ siteTitle }) => (
         projects
       </Link>
       <Link
-        to="/projects"
+        to="/resume"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => (
         blog
       </Link>
       <Link
-        to="/projects"
+        to="https://github.com/SanketDG"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -68,7 +68,7 @@ const Header = ({ siteTitle }) => (
         github
       </Link>
       <Link
-        to="/projects"
+        to="https://twitter.com/SanketDG"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -78,7 +78,7 @@ const Header = ({ siteTitle }) => (
         twitter
       </Link>
       <Link
-        to="/projects"
+        to="https://www.linkedin.com/in/sanketdg"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
