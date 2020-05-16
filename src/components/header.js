@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
       >
         blog
       </Link>
-      <Link
+      <a
         to="https://github.com/SanketDG"
         style={{
           color: `#2d3748`,
@@ -66,9 +66,9 @@ const Header = ({ siteTitle }) => (
         }}
       >
         github
-      </Link>
-      <Link
-        to="https://twitter.com/SanketDG"
+      </a>
+      <a
+        href="https://twitter.com/SanketDG"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -76,9 +76,9 @@ const Header = ({ siteTitle }) => (
         }}
       >
         twitter
-      </Link>
-      <Link
-        to="https://www.linkedin.com/in/sanketdg"
+      </a>
+      <a
+        href="https://www.linkedin.com/in/sanketdg"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -86,7 +86,7 @@ const Header = ({ siteTitle }) => (
         }}
       >
         linkedin
-      </Link>
+      </a>
     </nav>
   </header>
 )
