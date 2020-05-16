@@ -24,7 +24,7 @@ export default function Template({
             paddingBottom: "0.5rem",
           }}
         >
-          <p
+          <h1
             style={{
               fontSize: "40px",
               fontWeight: "500",
@@ -32,13 +32,13 @@ export default function Template({
             }}
           >
             {frontmatter.title}
-          </p>
+          </h1>
           <p
             style={{
               fontSize: "20px",
             }}
           >
-            Sanket | {frontmatter.date}
+            {frontmatter.date}
           </p>
         </div>
         <div

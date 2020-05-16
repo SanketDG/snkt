@@ -31,8 +31,8 @@ const BlogIndex = ({ data, location }) => {
                 paddingBottom: "0.5rem",
               }}
             >
-              <header>
-                <p
+              <div>
+                <h1
                   style={{
                     fontSize: "40px",
                     fontWeight: "500",
@@ -48,17 +48,21 @@ const BlogIndex = ({ data, location }) => {
                   >
                     {title}
                   </Link>
-                </p>
-              </header>
-              <p
+                </h1>
+                <span
+                  style={{
+                    fontSize: "20px",
+                  }}
+                >
+                  {node.frontmatter.date}
+                </span>
+              </div>
+
+              <section
                 style={{
-                  fontSize: "20px",
-                  fontWeight: "100",
+                  marginTop: "20px",
                 }}
               >
-                {node.frontmatter.date}
-              </p>
-              <section>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
