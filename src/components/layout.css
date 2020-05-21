@@ -679,3 +679,20 @@ a:hover:after, a:focus:after {
     width: 90% !important;
   }
 }
+
+@media all and (max-width: 900px) {
+  nav {
+    display: block !important;
+    width: 90% !important;
+  }
+}
+@media all and (max-width: 900px) {
+  .blog-main h1 {
+    display: block !important;
+    margin-left: 0px !important;
+  }
+
+  .blog-main span {
+    font-size: 16px !important;
+  }
+}

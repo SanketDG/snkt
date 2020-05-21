@@ -10,14 +10,19 @@ import Header from "../components/header"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  const years = [...new Set(posts.map(({ node }) => {
-    return new Date(node.frontmatter.date).getFullYear()
-  }))]
+  const years = [
+    ...new Set(
+      posts.map(({ node }) => {
+        return node.frontmatter.year
+      })
+    ),
+  ]
 
   return (
     <>
       <Header />
       <div
+        className="blog-main"
         style={{
           margin: `0 auto`,
           maxWidth: 960,
@@ -41,10 +46,7 @@ const BlogIndex = ({ data, location }) => {
               </h1>
               {/* <Bio /> */}
               {posts
-                .filter(
-                  ({ node }) =>
-                    new Date(node.frontmatter.date).getFullYear() === year
-                )
+                .filter(({ node }) => node.frontmatter.year === year)
                 .map(({ node }) => {
                   const title = node.frontmatter.title || node.fields.slug
                   return (
@@ -56,6 +58,7 @@ const BlogIndex = ({ data, location }) => {
                       <span
                         style={{
                           fontSize: "24px",
+                          fontFamily: `Roboto`,
                         }}
                       >
                         {node.frontmatter.date}
@@ -118,7 +121,8 @@ export const pageQuery = graphql`
           excerpt
           frontmatter {
             path
-            date(formatString: "MMMM DD, YYYY")
+            date: date(formatString: "MMMM DD")
+            year: date(formatString: "YYYY")
             title
             description
           }
