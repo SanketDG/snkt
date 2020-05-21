@@ -12,19 +12,34 @@ import BlogPostTemplate from "../templates/blogpost"
 
 const IndexPage = () => (
   <Styled.root data-testid="theme-root">
-      <SEO title="Home" />
-      <Header />
-      <Layout>
-        <h1>Hi.</h1>
+    <SEO title="Home" />
+    <Header />
+    <Layout>
+      <h1
+        style={{
+          fontFamily: `Patua One`,
+          fontSize: `48px`,
+          fontWeight: `400`,
+        }}
+      >
+        Hi.
+      </h1>
 
-        <h2>I am Sanket.</h2>
+      <h2
+        style={{
+          fontFamily: `Patua One`,
+          fontSize: `32px`,
+          fontWeight: `400`,
+        }}
+      >
+        I am Sanket.
+      </h2>
       {/* <Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
         Hi.
       </Text> */}
 
-        <Hero />
-
-      </Layout>
+      <Hero />
+    </Layout>
   </Styled.root>
 )
 

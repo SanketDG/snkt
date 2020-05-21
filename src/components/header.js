@@ -5,7 +5,9 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
+      fontFamily: `Roboto Mono`,
       marginBottom: `0rem`,
+      fontWeight: `700`
     }}
   >
     <nav
@@ -32,7 +34,7 @@ const Header = ({ siteTitle }) => (
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`,
+          marginLeft: `1.5rem`,
         }}
       >
         projects
@@ -42,7 +44,7 @@ const Header = ({ siteTitle }) => (
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`,
+          marginLeft: `1.5rem`,
         }}
       >
         resume
@@ -52,17 +54,17 @@ const Header = ({ siteTitle }) => (
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`,
+          marginLeft: `1.5rem`,
         }}
       >
         blog
       </Link>
       <a
-        to="https://github.com/SanketDG"
+        href="https://github.com/SanketDG"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`,
+          marginLeft: `1.5rem`,
         }}
       >
         github
@@ -72,7 +74,7 @@ const Header = ({ siteTitle }) => (
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`,
+          marginLeft: `1.5rem`,
         }}
       >
         twitter
@@ -82,7 +84,7 @@ const Header = ({ siteTitle }) => (
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          paddingLeft: `1.5rem`,
+          marginLeft: `1.5rem`,
         }}
       >
         linkedin
