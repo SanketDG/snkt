@@ -10,6 +10,9 @@ import Header from "../components/header"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const years = [...new Set(posts.map(({ node }) => {
+    return new Date(node.frontmatter.date).getFullYear()
+  }))]
 
   return (
     <>
@@ -18,47 +21,67 @@ const BlogIndex = ({ data, location }) => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `2rem 1.0875rem`,
+          padding: `1rem 1.0875rem`,
           width: "80%",
         }}
       >
-        {/* <Bio /> */}
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+        {years.map(year => {
           return (
             <div
               style={{
-                paddingBottom: "0.5rem",
+                marginTop: `1rem`,
               }}
             >
-              <div>
-                <h1
-                  style={{
-                    fontSize: "40px",
-                    fontWeight: "500",
-                    marginBottom: "5px",
-                  }}
-                >
-                  <Link
-                    style={{
-                      color: `#2d3748`,
-                      textDecoration: `none`,
-                    }}
-                    to={node.frontmatter.path}
-                  >
-                    {title}
-                  </Link>
-                </h1>
-                <span
-                  style={{
-                    fontSize: "20px",
-                  }}
-                >
-                  {node.frontmatter.date}
-                </span>
-              </div>
+              <h1
+                style={{
+                  marginBottom: "1rem",
+                }}
+              >
+                {year}
+              </h1>
+              {/* <Bio /> */}
+              {posts
+                .filter(
+                  ({ node }) =>
+                    new Date(node.frontmatter.date).getFullYear() === year
+                )
+                .map(({ node }) => {
+                  const title = node.frontmatter.title || node.fields.slug
+                  return (
+                    <div
+                      style={{
+                        paddingBottom: "0.5rem",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "24px",
+                        }}
+                      >
+                        {node.frontmatter.date}
+                      </span>
+                      <h1
+                        style={{
+                          marginBottom: "5px",
+                          display: `inline`,
+                          marginLeft: `5rem`,
+                          fontFamily: `Roboto`,
+                          fontWeight: `400`,
+                        }}
+                      >
+                        <Link
+                          style={{
+                            color: `#2d3748`,
+                            textDecoration: `none`,
+                            fontSize: "24px",
+                          }}
+                          to={node.frontmatter.path}
+                        >
+                          {title}
+                        </Link>
+                      </h1>
 
-              <section
+                      {/* <section
                 style={{
                   marginTop: "20px",
                 }}
@@ -68,7 +91,10 @@ const BlogIndex = ({ data, location }) => {
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-              </section>
+              </section> */}
+                    </div>
+                  )
+                })}
             </div>
           )
         })}
