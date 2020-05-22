@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
     style={{
       fontFamily: `Roboto Mono`,
       marginBottom: `0rem`,
-      fontWeight: `700`
+      fontWeight: `700`,
     }}
   >
     <nav
