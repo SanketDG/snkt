@@ -40,6 +40,7 @@ export default function Template({
           >
             {frontmatter.date}
           </p>
+          <hr />
         </div>
         <div
           className="blog-post-content"

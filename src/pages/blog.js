@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import Header from "../components/header"
 
 const BlogIndex = ({ data, location }) => {
@@ -52,13 +51,14 @@ const BlogIndex = ({ data, location }) => {
                   return (
                     <div
                       style={{
-                        paddingBottom: "0.5rem",
+                        marginBottom: "0.5rem"
                       }}
                     >
                       <span
                         style={{
                           fontSize: "24px",
                           fontFamily: `Roboto`,
+                          fontStyle: `italic`
                         }}
                       >
                         {node.frontmatter.date}
@@ -67,7 +67,7 @@ const BlogIndex = ({ data, location }) => {
                         style={{
                           marginBottom: "5px",
                           display: `inline`,
-                          marginLeft: `5rem`,
+                          marginLeft: `2rem`,
                           fontFamily: `Roboto`,
                           fontWeight: `400`,
                         }}
