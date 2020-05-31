@@ -16,7 +16,7 @@ export default function Template({
           margin: `0 auto`,
           maxWidth: 960,
           padding: `2rem 1.0875rem`,
-          width: "80%",
+          width: "100%",
         }}
       >
         <div
@@ -35,6 +35,7 @@ export default function Template({
           </h1>
           <p
             style={{
+              fontFamily: "Roboto",
               fontSize: "20px",
             }}
           >
