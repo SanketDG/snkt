@@ -5,7 +5,13 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,35 +47,35 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          `gatsby-remark-relative-images`,
           {
-            resolve: 'gatsby-remark-katex',
+            resolve: `gatsby-remark-katex`,
             options: {
-              strict: 'ignore'
-            }
+              strict: `ignore`,
+            },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
               withWebp: true,
               ignoreFileExtensions: [],
-            }
+            },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: { wrapperStyle: `margin-bottom: 1.0725rem` },
           },
-          'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-external-links'
-        ]
-      }
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`,
+        ],
+      },
     },
     `gatsby-plugin-sharp`,
     {
