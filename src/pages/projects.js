@@ -2,10 +2,12 @@ import React from "react"
 
 import Header from "../components/header"
 import Projects from "../texts/Projects"
-import { Grid, Box, Card, Text } from "theme-ui"
+import { Grid, Box, Card } from "theme-ui"
+import { Link } from "gatsby"
 
 const BlogIndex = ({ data, location }) => {
   let projects = ["portfolio", "awsomsauce", "modern-django-tooling", "khol"]
+
 
   return (
     <>
@@ -39,13 +41,14 @@ const BlogIndex = ({ data, location }) => {
                   maxWidth: 400,
                 }}
               >
-                <Text
+                <Link
+                  to={`#${project}`}
                   sx={{
                     textAlign: "center",
                   }}
                 >
                   {project}
-                </Text>
+                </Link>
               </Card>
             )
           })}
