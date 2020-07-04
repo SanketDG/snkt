@@ -25,15 +25,14 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto Mono`,
-            variants: [`400`, `700`],
+            family: `Patua One`,
           },
           {
             family: `Roboto`,
-            subsets: [`latin`],
           },
           {
-            family: `Patua One`,
+            family: `Source Code Pro`,
+            variants: [`400`, `700`],
           },
         ],
       },

@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      fontFamily: `Roboto Mono`,
+      fontFamily: `Source Code Pro`,
       marginBottom: `0rem`,
       fontWeight: `700`,
     }}
