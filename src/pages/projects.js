@@ -2,10 +2,9 @@ import React from "react"
 
 import Header from "../components/header"
 import Projects from "../texts/Projects"
-import { Grid, Box, Card } from "theme-ui"
-import { Link } from "gatsby"
+import { Grid, Card, Link, Text } from "theme-ui"
 
-const BlogIndex = ({ data, location }) => {
+const ProjectsIndex = ({ data, location }) => {
   let projects = ["portfolio", "awsomsauce", "modern-django-tooling", "khol"]
 
 
@@ -25,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
         <h2>Ongoing</h2>
         <Grid
           gap={3}
-          columns={[2]}
+          columns={[1, null, 2]}
           sx={{
             margin: "40px 0",
           }}
@@ -41,13 +40,14 @@ const BlogIndex = ({ data, location }) => {
                   maxWidth: 400,
                 }}
               >
-                <Link
-                  to={`#${project}`}
-                  sx={{
-                    textAlign: "center",
-                  }}
-                >
-                  {project}
+                <Link to={`#${project}`}>
+                  <Text
+                    sx={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {project}
+                  </Text>
                 </Link>
               </Card>
             )
@@ -59,4 +59,4 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default ProjectsIndex
