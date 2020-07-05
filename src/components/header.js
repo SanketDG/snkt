@@ -67,7 +67,7 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        github
+        github↗
       </a>
       <a
         href="https://twitter.com/SanketDG"
@@ -77,7 +77,7 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        twitter
+        twitter↗
       </a>
       <a
         href="https://www.linkedin.com/in/sanketdg"
@@ -87,7 +87,7 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        linkedin
+        linkedin↗
       </a>
     </nav>
   </header>
