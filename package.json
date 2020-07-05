@@ -15,6 +15,7 @@
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-mdx": "^1.1.6",
     "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-postcss": "^2.3.9",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.3",
@@ -38,10 +39,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-typography": "^0.16.19",
-    "theme-ui": "^0.3.1",
-    "typography": "^0.16.19",
-    "typography-theme-funston": "^0.16.19"
+    "tailwindcss": "^1.4.6",
+    "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
