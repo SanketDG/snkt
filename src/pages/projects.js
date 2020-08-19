@@ -40,7 +40,7 @@ const ProjectsIndex = ({ data, location }) => {
                   maxWidth: 400,
                 }}
               >
-                <Link to={`#${project}`}>
+                <a href={`#${project}`}>
                   <Text
                     sx={{
                       textAlign: "center",
@@ -48,7 +48,7 @@ const ProjectsIndex = ({ data, location }) => {
                   >
                     {project}
                   </Text>
-                </Link>
+                </a>
               </Card>
             )
           })}
