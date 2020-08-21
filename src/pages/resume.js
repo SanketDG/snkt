@@ -5,7 +5,7 @@ import Header from "../components/header"
 const Page = ({ data, location }) => {
   return (
     <>
-    <Header />
+      <Header />
       <main className="font-firago hyphens-manual">
         <div className="p-6 mx-auto max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 print:p-4 bg-white md:pt-4">
           <header className="flex items-center mb-3 md:mb-7 flex-col print:mb-0">
@@ -136,22 +136,22 @@ const Page = ({ data, location }) => {
 
                 <section className="mb-3.5 break-inside-avoid">
                   <header>
-                    <h3 className="text-sm font-semibold leading-snugish uppercase mb-3">
-                      Runner up at HackerEarth IndiaHacks Open Source Hackathon
-                    </h3>
-                    <p className="leading-normal text-resume mb-1">
-                      Contributed to various open source projects to reach the
-                      leaderboard on the basis of difficulty of issues triaged.
-                    </p>
-                  </header>
-                  <header>
                     <h3 className="text-sm font-semibold leading-snugish uppercase mt-3 mb-3">
                       Mentor for Google Summer of Code 2017 and 2020.
                     </h3>
                     <p className="leading-normal text-resume mb-1">
                       Mentored a GSoC student for the coala and Anita-B
-                      organization in respective years to attain the milestones
-                      for the given project.
+                      organization in respective years to enhance their Portal
+                      application to enable
+                    </p>
+                  </header>
+                  <header>
+                    <h3 className="text-sm font-semibold leading-snugish uppercase mb-3">
+                      Runner up at HackerEarth IndiaHacks Open Source Hackathon
+                    </h3>
+                    <p className="leading-normal text-resume mb-3">
+                      Contributed to various open source projects to reach the
+                      leaderboard on the basis of difficulty of issues triaged.
                     </p>
                   </header>
                 </section>
@@ -168,23 +168,24 @@ const Page = ({ data, location }) => {
                   <header>
                     <h3 className="text-md font-semibold leading-snugish mb-1">
                       <a
-                        href="https://github.com/WebPraktikos/universal-resume"
+                        href="https://github.com/awsomsauce/hugo-theme-sauce"
                         className="group"
                       >
-                        Universal Resume
+                        hugo-theme-sauce
                         <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
                           ↗
                         </span>
                       </a>
                     </h3>
                     <p className="leading-normal text-resume mb-1">
-                      Since 2019 | HTML CSS
+                      Hugo • Tachyons • Netlify
                     </p>
                   </header>
                   <p className="mt-2.1 text-resume leading-normal">
-                    Good design is as little design as possible. Less, but
-                    better — because it concentrates on the essential aspects,
-                    and the pro&shy;ducts are not burdened with non-essentials.
+                    The Hugo theme that runs{" "}
+                    <a href="https://awsomsauce.tech" className="group">
+                      awsomsauce.tech!
+                    </a>
                   </p>
                 </section>
               </div>
@@ -193,55 +194,98 @@ const Page = ({ data, location }) => {
                 <header>
                   <h3 className="text-md font-semibold leading-snugish mb-1">
                     <a
-                      href="https://github.com/WebPraktikos/tailwindcss-rich-docs"
+                      href="https://github.com/SanketDG/djurl"
                       className="group"
                     >
-                      tailwindcss-rich-docs
+                      djurl
                       <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
                         ↗
                       </span>
                     </a>
                   </h3>
                   <p className="leading-normal text-resume mb-1">
-                    2017 | JavaScript
+                    Python • Django • Docker
                   </p>
                 </header>
                 <p className="mt-2.1 text-resume leading-normal">
-                  Good design is long-lasting. It avoids being fashionable and
-                  therefore never appears antiquated.
+                  A minimal self-hosted URL shortener built using Django built
+                  with modern tooling for Python and best practices in mind.
                   <br />
-                  Good design is honest. It does not make a product more
-                  innovative, powerful or valuable than it really is.
+                  <br />
+                  This is also the reference application for
+                  modern-django-tooling↗
                 </p>
               </section>
 
               <section className="mb-3.5 break-inside-avoid">
                 <header>
                   <h3 className="text-md font-semibold leading-snugish mb-1">
-                    Third One
+                    <a
+                      href="https://github.com/SanketDG/extenstart"
+                      className="group"
+                    >
+                      extenstart
+                      <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
+                        ↗
+                      </span>
+                    </a>
                   </h3>
-                  <p className="leading-normal text-resume mb-1">
-                    2013 – 2014 | Vue
-                  </p>
+                  <p className="leading-normal text-resume mb-1">Javascript</p>
                 </header>
                 <p className="mt-2.1 text-resume leading-normal">
-                  Good design is innovative. Technological development is always
-                  offering new opportunities for innovative design.
+                  Opinionated Boilerplate for Web Extensions
                 </p>
               </section>
 
               <section className="mb-3.5 break-inside-avoid">
                 <header>
                   <h3 className="text-md font-semibold leading-snugish mb-1">
-                    Fantastic Project
+                    Open Source Contributions
                   </h3>
-                  <p className="leading-normal text-resume mb-1">
-                    2012 | JavaScript
-                  </p>
                 </header>
                 <p className="mt-2.1 text-resume leading-normal">
-                  Strip steak tail capicola alcatra ground round tenderloin ar.
-                  Venison tri-tip porchetta, brisket tenderloin pig beef.
+                  Contributions to{" "}
+                  <a
+                    href="https://github.com/networkx/networkx/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged"
+                    className="group"
+                  >
+                    NetworkX↗
+                  </a>{" "}
+                  (a graph library for Python),{" "}
+                  <a
+                    href="https://github.com/coala/coala/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged"
+                    className="group"
+                  >
+                    coala↗
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://github.com/coala/coala-bears/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged"
+                    className="group"
+                  >
+                    coala-bears↗
+                  </a>{" "}
+                  (an opinionated universal linting tool),{" "}
+                  <a
+                    href="https://github.com/PostHog/PostHog/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged"
+                    className="group"
+                  >
+                    PostHog↗
+                  </a>{" "}
+                  (Open Source Product Analytics),{" "}
+                  <a
+                    href="https://github.com/pypa/bandersnatch/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged"
+                    className="group"
+                  >
+                    PyPA↗
+                  </a>{" "}
+                  (Python Packaging Authority) and{" "}
+                  <a
+                    href="https://github.com/search?l=&q=is%3Apr+author%3ASanketDG+is%3Amerged&type=Issues"
+                    className="group"
+                  >
+                    many more↗
+                  </a>
                 </p>
               </section>
             </section>
@@ -260,10 +304,10 @@ const Page = ({ data, location }) => {
                   </header>
                   <div class="my-3.2 last:pb-1.5">
                     <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                      <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                      <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                         Python
                       </li>
-                      <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                      <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                         Javascript
                       </li>
                     </ul>
@@ -279,10 +323,10 @@ const Page = ({ data, location }) => {
                 </header>
                 <div class="my-3.2 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Django
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Flask
                     </li>
                   </ul>
@@ -297,19 +341,19 @@ const Page = ({ data, location }) => {
                 </header>
                 <div class="my-3.2 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Git
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Linux
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Redis
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Elastic (ELK)
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Docker
                     </li>
                   </ul>
@@ -324,10 +368,10 @@ const Page = ({ data, location }) => {
                 </header>
                 <div class="my-3.2 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       PHP
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-base print:bg-white border-solid border-2 border-black">
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Node.js
                     </li>
                   </ul>
