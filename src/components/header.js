@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
           textDecoration: `none`,
         }}
       >
-        home
+        home🏠
       </Link>
       <Link
         to="/projects"
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        projects
+        projects🔧
       </Link>
       <Link
         to="/resume"
@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        resume
+        resume📰
       </Link>
       <Link
         to="/blog"
@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        blog
+        blog🌐
       </Link>
       <a
         href="https://github.com/SanketDG"
