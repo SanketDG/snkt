@@ -139,7 +139,7 @@ const Page = ({ data, location }) => {
                     <h3 className="text-sm font-semibold leading-snugish uppercase mt-3 mb-3">
                       Mentor for Google Summer of Code 2017 and 2020.
                     </h3>
-                    <p className="leading-normal text-resume mb-1">
+                    <p className="leading-normal text-resume mb-3">
                       Mentored a GSoC student for the coala and Anita-B
                       organization in respective years to enhance their Portal
                       application to enable
