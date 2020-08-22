@@ -13,7 +13,18 @@ const Page = ({ data, location }) => {
               Sanket Dasgupta
             </h1>
             <p className="mt-1 text-s leading-normal">
-              snkt.xyz ↗ • sanketdasgupta@gmail.com • github.com/SanketDG ↗
+              <a href="https://snkt.tech" className="group">
+                snkt.tech↗
+              </a>{" "}
+              •{" "}
+              <a href="mailto:sanketdasgupta@gmail.com" className="group">
+                sanketdasgupta@gmail.com
+              </a>{" "}
+              •{" "}
+              <a href="https://github.com/SanketDG" className="group">
+                {" "}
+                github.com/SanketDG ↗
+              </a>
             </p>
           </header>
 
@@ -212,8 +223,13 @@ const Page = ({ data, location }) => {
                   with modern tooling for Python and best practices in mind.
                   <br />
                   <br />
-                  This is also the reference application for
-                  modern-django-tooling↗
+                  This is also the reference application for{" "}
+                  <a
+                    href="https://github.com/SanketDG/djurl/tree/master/modern-django-tooling"
+                    className="group"
+                  >
+                    modern-django-tooling↗
+                  </a>
                 </p>
               </section>
 
@@ -265,7 +281,7 @@ const Page = ({ data, location }) => {
                   >
                     coala-bears↗
                   </a>{" "}
-                  (an opinionated universal linting tool),{" "}
+                  (an opinionated language agnostic linting tool),{" "}
                   <a
                     href="https://github.com/PostHog/PostHog/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged"
                     className="group"
