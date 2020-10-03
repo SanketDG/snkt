@@ -49,9 +49,9 @@ const Page = ({ data, location }) => {
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
                         ›
                       </span>
-                      Developed and tested a Chrome extension that bought a
-                      archaic email encryption product to the cloud, on modern
-                      web technologies. Webpack, ES6, HTML/CSS.
+                      Developed a Chrome extension that bought an archaic email
+                      encryption product to the cloud, on modern web
+                      technologies. Webpack, ES6, HTML/CSS.
                     </li>
                     <li className="mt-2.1 text-resume leading-normal">
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
@@ -66,16 +66,17 @@ const Page = ({ data, location }) => {
                         ›
                       </span>
                       Refactored I/O intensive code in the Django application to
-                      be processed by an asynchronous worker queue which uses
-                      Redis that resulted in 17x improvement over response
-                      times.
+                      be processed by an asynchronous worker queue that used
+                      Redis to store tasks and green threads to interleave tasks
+                      which resulted in 17x improvement over response times.
                     </li>
                     <li className="mt-2.1 text-resume leading-normal">
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
                         ›
                       </span>
                       Separated a monolithic Django codebase into two smaller
-                      microservices and containerized them using Docker.
+                      microservices and containerized them using Docker
+                      improving both the development and deploying experience.
                     </li>
                     <li className="mt-2.1 text-resume leading-normal">
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
@@ -358,19 +359,19 @@ const Page = ({ data, location }) => {
                 <div class="my-3.2 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
-                      Git
-                    </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
-                      Linux
+                      Webpack
                     </li>
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Redis
                     </li>
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
-                      Elastic (ELK)
+                      Docker
                     </li>
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
-                      Docker
+                      Git
+                    </li>
+                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                      Elastic (ELK)
                     </li>
                   </ul>
                 </div>
