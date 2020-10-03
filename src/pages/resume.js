@@ -340,24 +340,24 @@ const Page = ({ data, location }) => {
               </section>
             </section>
 
-            <section class="mt-7 first:mt-0">
-              <div class="break-inside-avoid">
-                <h2 class="mb-3 font-bold tracking-widest text-lg print:font-normal">
+            <section className="mt-7 first:mt-0">
+              <div className="break-inside-avoid">
+                <h2 className="mb-3 font-bold tracking-widest text-lg print:font-normal">
                   SKILLS
                 </h2>
 
-                <section class="mb-3.5 break-inside-avoid">
+                <section className="mb-3.5 break-inside-avoid">
                   <header>
-                    <h3 class="text-lg font-semibold leading-snugish mb-3">
+                    <h3 className="text-lg font-semibold leading-snugish mb-3">
                       Proficient In
                     </h3>
                   </header>
-                  <div class="my-3.1 last:pb-1.5">
-                    <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                      <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                  <div className="my-3.1 last:pb-1.5">
+                    <ul className="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
+                      <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                         Python
                       </li>
-                      <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                      <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                         Javascript
                       </li>
                     </ul>
@@ -365,63 +365,63 @@ const Page = ({ data, location }) => {
                 </section>
               </div>
 
-              <section class="mb-3.5 break-inside-avoid">
+              <section className="mb-3.5 break-inside-avoid">
                 <header>
-                  <h3 class="text-lg font-semibold leading-snugish mb-3">
+                  <h3 className="text-lg font-semibold leading-snugish mb-3">
                     Frameworks
                   </h3>
                 </header>
-                <div class="my-3.1 last:pb-1.5">
-                  <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                <div className="my-3.1 last:pb-1.5">
+                  <ul className="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Django
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Flask
                     </li>
                   </ul>
                 </div>
               </section>
 
-              <section class="mb-3.5 break-inside-avoid">
+              <section className="mb-3.5 break-inside-avoid">
                 <header>
-                  <h3 class="text-lg font-semibold leading-snugish mb-3">
+                  <h3 className="text-lg font-semibold leading-snugish mb-3">
                     Tools • Databases
                   </h3>
                 </header>
-                <div class="my-3.1 last:pb-1.5">
-                  <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                <div className="my-3.1 last:pb-1.5">
+                  <ul className="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Webpack
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Redis
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Docker
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Git
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Elastic (ELK)
                     </li>
                   </ul>
                 </div>
               </section>
 
-              <section class="mb-3.5 break-inside-avoid">
+              <section className="mb-3.5 break-inside-avoid">
                 <header>
-                  <h3 class="text-lg font-semibold leading-snugish mb-3">
+                  <h3 className="text-lg font-semibold leading-snugish mb-3">
                     Other
                   </h3>
                 </header>
-                <div class="my-3.1 last:pb-1.5">
-                  <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                <div className="my-3.1 last:pb-1.5">
+                  <ul className="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       PHP
                     </li>
-                    <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Node.js
                     </li>
                   </ul>
