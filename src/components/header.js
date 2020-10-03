@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { BiPen, BiWrench, BiHomeAlt, BiGlassesAlt } from "react-icons/bi"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -27,7 +28,13 @@ const Header = ({ siteTitle }) => (
           textDecoration: `none`,
         }}
       >
-        home🏠
+        home
+        <BiHomeAlt
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+          }}
+        />
       </Link>
       <Link
         to="/projects"
@@ -37,7 +44,13 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        projects🔧
+        projects
+        <BiWrench
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+          }}
+        />
       </Link>
       <Link
         to="/resume"
@@ -47,7 +60,13 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        resume📰
+        resume
+        <BiGlassesAlt
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+          }}
+        />
       </Link>
       <Link
         to="/blog"
@@ -57,7 +76,13 @@ const Header = ({ siteTitle }) => (
           marginLeft: `1.5rem`,
         }}
       >
-        blog🌐
+        blog
+        <BiPen
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+          }}
+        />
       </Link>
       <a
         href="https://github.com/SanketDG"
