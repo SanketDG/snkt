@@ -1,5 +1,4 @@
 import React from "react"
-
 import Header from "../components/header"
 
 const Page = ({ data, location }) => {
@@ -13,15 +12,27 @@ const Page = ({ data, location }) => {
               Sanket Dasgupta
             </h1>
             <p className="mt-1 text-s leading-normal">
-              <a href="https://snkt.tech" className="group">
+              <a
+                style={{ fontWeight: "400" }}
+                href="https://snkt.tech"
+                className="group"
+              >
                 snkt.tech↗
               </a>{" "}
               •{" "}
-              <a href="mailto:sanketdasgupta@gmail.com" className="group">
+              <a
+                style={{ fontWeight: "400" }}
+                href="mailto:sanketdasgupta@gmail.com"
+                className="group"
+              >
                 sanketdasgupta@gmail.com
               </a>{" "}
               •{" "}
-              <a href="https://github.com/SanketDG" className="group">
+              <a
+                style={{ fontWeight: "400" }}
+                href="https://github.com/SanketDG"
+                className="group"
+              >
                 {" "}
                 github.com/SanketDG ↗
               </a>
@@ -238,6 +249,28 @@ const Page = ({ data, location }) => {
                 <header>
                   <h3 className="text-md font-semibold leading-snugish mb-1">
                     <a
+                      href="https://github.com/SanketDG/khol"
+                      className="group"
+                    >
+                      khol (খোল)
+                      <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
+                        ↗
+                      </span>
+                    </a>
+                  </h3>
+                  <p className="leading-normal text-resume mb-1">C</p>
+                </header>
+                <p className="mt-2.1 text-resume leading-normal">
+                  A minimalistic shell written in C with support for
+                  redirection, history and pipes.
+                  <br />
+                </p>
+              </section>
+
+              <section className="mb-3.5 break-inside-avoid">
+                <header>
+                  <h3 className="text-md font-semibold leading-snugish mb-1">
+                    <a
                       href="https://github.com/SanketDG/extenstart"
                       className="group"
                     >
@@ -319,7 +352,7 @@ const Page = ({ data, location }) => {
                       Proficient In
                     </h3>
                   </header>
-                  <div class="my-3.2 last:pb-1.5">
+                  <div class="my-3.1 last:pb-1.5">
                     <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
                       <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                         Python
@@ -338,7 +371,7 @@ const Page = ({ data, location }) => {
                     Frameworks
                   </h3>
                 </header>
-                <div class="my-3.2 last:pb-1.5">
+                <div class="my-3.1 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Django
@@ -356,7 +389,7 @@ const Page = ({ data, location }) => {
                     Tools • Databases
                   </h3>
                 </header>
-                <div class="my-3.2 last:pb-1.5">
+                <div class="my-3.1 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Webpack
@@ -383,7 +416,7 @@ const Page = ({ data, location }) => {
                     Other
                   </h3>
                 </header>
-                <div class="my-3.2 last:pb-1.5">
+                <div class="my-3.1 last:pb-1.5">
                   <ul class="flex flex-wrap text-resume leading-relaxed -mr-1.6 -mb-1.6">
                     <li class="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       PHP
