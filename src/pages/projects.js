@@ -13,18 +13,21 @@ const ProjectsIndex = ({ data, location }) => {
     },
     {
       name: "djurl",
+      description: `A minimal self-hosted URL shortener built using Django built with
+      modern tooling for Python and best practices in mind.`,
     },
     {
       name: "extenstart",
+      description: `Opinionated Boilerplate for Web Extensions`,
     },
     {
       name: "khol",
+      description: `A minimalistic shell written in C with support for redirection,
+      history and pipes.`,
     },
     {
       name: "awsomsauce",
-      description: `Experimental next-gen blogging platform that dives deep into
-      architecture and systems. I am totally kidding, it's just a blog I
-      write with a few of my friends.`,
+      description: `An engineering blog that I and some of my friends write!`,
     },
   ]
 
