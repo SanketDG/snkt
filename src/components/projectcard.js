@@ -17,16 +17,13 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <p className="text-gray-700 text-base">{project.description}</p>
-        <div className="px-6 pb-4 pt-1">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            Hugo
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            Tachyons
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            Netlify
-          </span>
+        <div className="pb-4 pt-1">
+          {project.tech &&
+            project.tech.map(technology => (
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                {technology}
+              </span>
+            ))}
         </div>
       </div>
     </div>
