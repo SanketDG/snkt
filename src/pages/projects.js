@@ -6,7 +6,27 @@ import { Grid } from "theme-ui"
 import ProjectCard from "../components/projectcard"
 
 const ProjectsIndex = ({ data, location }) => {
-  let projects = ["portfolio", "awsomsauce", "modern-django-tooling", "khol"]
+  let projects = [
+    {
+      name: "portfolio",
+      description: `Made this portfolio using Gatsby`,
+    },
+    {
+      name: "djurl",
+    },
+    {
+      name: "extenstart",
+    },
+    {
+      name: "khol",
+    },
+    {
+      name: "awsomsauce",
+      description: `Experimental next-gen blogging platform that dives deep into
+      architecture and systems. I am totally kidding, it's just a blog I
+      write with a few of my friends.`,
+    },
+  ]
 
   return (
     <>
@@ -30,10 +50,9 @@ const ProjectsIndex = ({ data, location }) => {
             margin: "40px 0",
           }}
         >
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects.map(project => (
+            <ProjectCard project={project} />
+          ))}
         </Grid>
       </div>
     </>
