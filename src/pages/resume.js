@@ -68,26 +68,29 @@ const Page = ({ data, location }) => {
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
                         ›
                       </span>
-                      Integrated a Python/Django application that was
-                      responsible for creating API endpoints that is consumed by
-                      the Chrome extension.
+                      Developed an Outlook Web Addin for Outlook suite of
+                      products and refactored to use modern tooling and bundling
+                      techniques to improve performance by 4x. The addin code
+                      was deployed to AWS Cloudfront CDN served over HTTP/2,
+                      which led to an additional boost in performance.
                     </li>
                     <li className="mt-2.1 text-resume leading-normal">
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
                         ›
                       </span>
-                      Refactored I/O intensive code in the Django application to
-                      be processed by an asynchronous worker queue that used
+                      Separated a monolithic Django codebase that was consumed
+                      by the above two client side applications into two smaller
+                      services and containerized them using Docker improving
+                      both the development and deploying experience.
+                    </li>
+                    <li className="mt-2.1 text-resume leading-normal">
+                      <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
+                        ›
+                      </span>
+                      Refactored I/O intensive co de in the Django application
+                      to be processed by an asynchronous worker queue that used
                       Redis to store tasks and green threads to interleave tasks
                       which resulted in 17x improvement over response times.
-                    </li>
-                    <li className="mt-2.1 text-resume leading-normal">
-                      <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
-                        ›
-                      </span>
-                      Separated a monolithic Django codebase into two smaller
-                      microservices and containerized them using Docker
-                      improving both the development and deploying experience.
                     </li>
                     <li className="mt-2.1 text-resume leading-normal">
                       <span className="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">
@@ -164,8 +167,7 @@ const Page = ({ data, location }) => {
                     </h3>
                     <p className="leading-normal text-resume mb-3">
                       Mentored a GSoC student for the coala and Anita-B
-                      organization in respective years to enhance their Portal
-                      application to enable
+                      organization in respective years.
                     </p>
                   </header>
                   <header>
@@ -348,7 +350,7 @@ const Page = ({ data, location }) => {
 
                 <section className="mb-3.5 break-inside-avoid">
                   <header>
-                    <h3 className="text-lg font-semibold leading-snugish mb-3">
+                    <h3 className="text-lg font-semibold leading-snugish mb-2">
                       Proficient In
                     </h3>
                   </header>
@@ -367,7 +369,7 @@ const Page = ({ data, location }) => {
 
               <section className="mb-3.5 break-inside-avoid">
                 <header>
-                  <h3 className="text-lg font-semibold leading-snugish mb-3">
+                  <h3 className="text-lg font-semibold leading-snugish mb-2">
                     Frameworks
                   </h3>
                 </header>
@@ -379,13 +381,16 @@ const Page = ({ data, location }) => {
                     <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Flask
                     </li>
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                      React
+                    </li>
                   </ul>
                 </div>
               </section>
 
               <section className="mb-3.5 break-inside-avoid">
                 <header>
-                  <h3 className="text-lg font-semibold leading-snugish mb-3">
+                  <h3 className="text-lg font-semibold leading-snugish mb-2">
                     Tools • Databases
                   </h3>
                 </header>
@@ -412,7 +417,7 @@ const Page = ({ data, location }) => {
 
               <section className="mb-3.5 break-inside-avoid">
                 <header>
-                  <h3 className="text-lg font-semibold leading-snugish mb-3">
+                  <h3 className="text-lg font-semibold leading-snugish mb-2">
                     Other
                   </h3>
                 </header>
@@ -423,6 +428,9 @@ const Page = ({ data, location }) => {
                     </li>
                     <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
                       Node.js
+                    </li>
+                    <li className="px-2.5 mr-1.6 mb-1.6 text-sm print:bg-white border-solid border-2 border-black">
+                      Go
                     </li>
                   </ul>
                 </div>
@@ -436,7 +444,7 @@ const Page = ({ data, location }) => {
 
                 <section className="mb-3.5 break-inside-avoid">
                   <header>
-                    <h3 className="text-md font-semibold leading-snugish mb-3">
+                    <h3 className="text-md font-semibold leading-snugish mb-2">
                       Academy of Technology
                     </h3>
                     <p className="leading-normal text-resume mb-3">
