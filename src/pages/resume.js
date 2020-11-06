@@ -6,7 +6,7 @@ const Page = ({ data, location }) => {
     <>
       <Header />
       <main className="font-firago hyphens-manual">
-        <div className="p-6 mx-auto max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 print:p-4 bg-white md:pt-4">
+        <div className="p-6 mx-auto max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 print:p-4 bg-white md:pt-4">
           <header className="flex items-center mb-3 md:mb-7 flex-col print:mb-0">
             <h1 className="text-2xl font-semibold pb-px mb-3 print:mb-0">
               Sanket Dasgupta
