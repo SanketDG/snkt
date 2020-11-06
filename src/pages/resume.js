@@ -191,59 +191,34 @@ const Page = ({ data, location }) => {
                   <header>
                     <h3 className="text-md font-semibold leading-snugish mb-1">
                       <a
-                        href="https://github.com/awsomsauce/hugo-theme-sauce"
+                        href="https://github.com/SanketDG/djurl"
                         className="group"
                       >
-                        hugo-theme-sauce
+                        djurl
                         <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
                           ↗
                         </span>
                       </a>
                     </h3>
                     <p className="leading-normal text-resume mb-1">
-                      Hugo • Tachyons • Netlify
+                      Python • Django • Docker
                     </p>
                   </header>
                   <p className="mt-2.1 text-resume leading-normal">
-                    The Hugo theme that runs{" "}
-                    <a href="https://awsomsauce.tech" className="group">
-                      awsomsauce.tech!
+                    A minimal self-hosted URL shortener built using Django built
+                    with modern tooling for Python and best practices in mind.
+                    <br />
+                    <br />
+                    This is also the reference application for{" "}
+                    <a
+                      href="https://github.com/SanketDG/djurl/tree/master/modern-django-tooling"
+                      className="group"
+                    >
+                      modern-django-tooling↗
                     </a>
                   </p>
                 </section>
               </div>
-
-              <section className="mb-3.5 break-inside-avoid">
-                <header>
-                  <h3 className="text-md font-semibold leading-snugish mb-1">
-                    <a
-                      href="https://github.com/SanketDG/djurl"
-                      className="group"
-                    >
-                      djurl
-                      <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
-                        ↗
-                      </span>
-                    </a>
-                  </h3>
-                  <p className="leading-normal text-resume mb-1">
-                    Python • Django • Docker
-                  </p>
-                </header>
-                <p className="mt-2.1 text-resume leading-normal">
-                  A minimal self-hosted URL shortener built using Django built
-                  with modern tooling for Python and best practices in mind.
-                  <br />
-                  <br />
-                  This is also the reference application for{" "}
-                  <a
-                    href="https://github.com/SanketDG/djurl/tree/master/modern-django-tooling"
-                    className="group"
-                  >
-                    modern-django-tooling↗
-                  </a>
-                </p>
-              </section>
 
               <section className="mb-3.5 break-inside-avoid">
                 <header>
@@ -284,6 +259,31 @@ const Page = ({ data, location }) => {
                 </header>
                 <p className="mt-2.1 text-resume leading-normal">
                   Opinionated Boilerplate for Web Extensions
+                </p>
+              </section>
+
+              <section className="mb-3.5 break-inside-avoid">
+                <header>
+                  <h3 className="text-md font-semibold leading-snugish mb-1">
+                    <a
+                      href="https://github.com/awsomsauce/hugo-theme-sauce"
+                      className="group"
+                    >
+                      hugo-theme-sauce
+                      <span className="inline-block print:text-black font-normal group-hover:transition duration-100 ease-in">
+                        ↗
+                      </span>
+                    </a>
+                  </h3>
+                  <p className="leading-normal text-resume mb-1">
+                    Hugo • Tachyons • Netlify
+                  </p>
+                </header>
+                <p className="mt-2.1 text-resume leading-normal">
+                  The Hugo theme that runs{" "}
+                  <a href="https://awsomsauce.tech" className="group">
+                    awsomsauce.tech!
+                  </a>
                 </p>
               </section>
 
