@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { BiPen, BiWrench, BiHomeAlt, BiGlassesAlt } from "react-icons/bi"
+import { FiGithub, FiTwitter, FiLinkedin } from "react-icons/fi"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -14,14 +15,14 @@ const Header = ({ siteTitle }) => (
     <nav
       style={{
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
         margin: `0 auto`,
         maxWidth: 960,
         padding: `2rem 1.0875rem`,
-        width: "50%",
       }}
     >
       <Link
+        className="nav-item"
         to="/"
         style={{
           color: `#2d3748`,
@@ -38,6 +39,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Link
         to="/projects"
+        className="nav-item"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -54,6 +56,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Link
         to="/resume"
+        className="nav-item"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -70,6 +73,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Link
         to="/blog"
+        className="nav-item"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
@@ -86,33 +90,54 @@ const Header = ({ siteTitle }) => (
       </Link>
       <a
         href="https://github.com/SanketDG"
+        className="navbar-icon"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
-          marginLeft: `1.5rem`,
+          marginLeft: `auto`,
         }}
       >
-        github↗
+        <FiGithub
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+            textDecoration: `none`,
+          }}
+        />
       </a>
       <a
         href="https://twitter.com/SanketDG"
+        className="navbar-icon"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
           marginLeft: `1.5rem`,
         }}
       >
-        twitter↗
+        <FiTwitter
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+            textDecoration: `none`,
+          }}
+        />
       </a>
       <a
         href="https://www.linkedin.com/in/sanketdg"
+        className="navbar-icon"
         style={{
           color: `#2d3748`,
           textDecoration: `none`,
           marginLeft: `1.5rem`,
         }}
       >
-        linkedin↗
+        <FiLinkedin
+          style={{
+            marginLeft: "5px",
+            display: "inline",
+            textDecoration: `none`,
+          }}
+        />
       </a>
     </nav>
   </header>
