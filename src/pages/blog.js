@@ -1,13 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-// import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Header from "../components/header"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   const years = [
     ...new Set(
@@ -51,14 +47,14 @@ const BlogIndex = ({ data, location }) => {
                   return (
                     <div
                       style={{
-                        marginBottom: "0.5rem"
+                        marginBottom: "0.5rem",
                       }}
                     >
                       <span
                         style={{
                           fontSize: "24px",
                           fontFamily: `Roboto`,
-                          fontStyle: `italic`
+                          fontStyle: `italic`,
                         }}
                       >
                         {node.frontmatter.date}
@@ -83,18 +79,6 @@ const BlogIndex = ({ data, location }) => {
                           {title}
                         </Link>
                       </h1>
-
-                      {/* <section
-                style={{
-                  marginTop: "20px",
-                }}
-              >
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section> */}
                     </div>
                   )
                 })}
