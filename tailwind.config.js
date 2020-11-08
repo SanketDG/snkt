@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const plugin = require("tailwindcss/plugin")
 
 module.exports = {
+  purge: ["./src/**/*.js", "./src/**/*.mdx"],
   theme: {
     /* For Letter size */
     screens: {
@@ -28,7 +29,7 @@ module.exports = {
         base: "1rem", // 16px base
         md: "1.0625rem", // 17px body
         lg: "1.125rem", // 18px heading
-        resume: "0.87rem"
+        resume: "0.87rem",
       },
       lineHeight: {
         snugish: "1.32",
