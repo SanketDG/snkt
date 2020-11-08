@@ -1,7 +1,7 @@
 import React from "react"
 
 // import { DiGithubBadge } from "react-icons/di"
-import { BiLink } from "react-icons/bi"
+import { FaGithub } from "react-icons/fa"
 
 const ProjectCard = ({ project }) => {
   return (
@@ -10,8 +10,8 @@ const ProjectCard = ({ project }) => {
         <div className="font-bold text-xl mb-2">
           {project.name}{" "}
           <span className="inline-block text-2xl align-middle">
-            <a href="https://github.com/awsomsauce">
-              <BiLink size={28} />
+            <a href={project.link}>
+              <FaGithub size={20} />
             </a>
           </span>
         </div>

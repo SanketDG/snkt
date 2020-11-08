@@ -10,28 +10,33 @@ const ProjectsIndex = ({ data, location }) => {
       name: "portfolio",
       description: `Made this portfolio using Gatsby`,
       tech: ["Gatsby", "Tailwind"],
+      link: "https://github.com/SanketDG/snkt",
     },
     {
       name: "djurl",
       description: `A minimal self-hosted URL shortener built using Django built with
       modern tooling for Python and best practices in mind.`,
       tech: ["Python", "Django", "Docker", "Heroku"],
+      link: "https://github.com/SanketDG/djurl",
     },
     {
       name: "extenstart",
       description: `Opinionated Boilerplate for Web Extensions`,
       tech: ["Javascript", "ES6", "Webpack"],
+      link: "https://github.com/SanketDG/extenstart",
     },
     {
       name: "khol",
       description: `A minimalistic shell written in C with support for redirection,
       history and pipes.`,
       tech: ["Hugo", "Tachyons", "Netlify"],
+      link: "https://github.com/SanketDG/khol",
     },
     {
       name: "awsomsauce",
       description: `An engineering blog that I and some of my friends write!`,
       tech: ["Hugo", "Tachyons", "Netlify"],
+      link: "https://github.com/awsomsauce/website",
     },
   ]
 
