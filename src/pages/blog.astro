@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content"
+import Base from "../layouts/Base.astro"
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+
+const day = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "2-digit",
+  timeZone: "UTC",
+})
+
+const byYear = new Map<number, typeof posts>()
+for (const post of posts) {
+  const year = post.data.date.getUTCFullYear()
+  byYear.set(year, [...(byYear.get(year) ?? []), post])
+}
+---
+
+<Base title="Blog" description="Writing by Sanket Dasgupta.">
+  {
+    [...byYear].map(([year, entries]) => (
+      <section>
+        <h1>{year}</h1>
+        <ul class="posts">
+          {entries.map((post) => (
+            <li>
+              <time datetime={post.data.date.toISOString()}>{day.format(post.data.date)}</time>
+              <a href={post.data.path}>{post.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

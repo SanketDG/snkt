@@ -1,0 +1,302 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fff;
+  --fg: #2d3748;
+  --muted: #4a5568;
+  --line: #e2e8f0;
+  --chip: #edf2f7;
+  --link: #2b6cb0;
+  --shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --display: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c;
+    --fg: #e2e8f0;
+    --muted: #a0aec0;
+    --line: #2d3748;
+    --chip: #2d3748;
+    --link: #63b3ed;
+    --shadow: none;
+  }
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #333;
+    --line: #999;
+    --chip: #fff;
+    --link: #000;
+    --shadow: none;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 1rem/1.65 var(--sans);
+}
+
+.wrap {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.1rem 1.5rem;
+}
+
+a {
+  color: var(--link);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1,
+h2 {
+  font-family: var(--display);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* header */
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.75rem;
+  padding: 2rem 0;
+  font: 700 1rem var(--mono);
+}
+
+.site-header a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.site-header a:hover,
+.site-header a[aria-current] {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+
+.socials {
+  display: flex;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.socials svg {
+  display: block;
+}
+
+/* footer */
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* home */
+
+.lede {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.display {
+  font-family: var(--display);
+  font-size: 1.75rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* projects */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  height: 100%;
+  padding: 0.5rem 1.5rem 1rem;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--fg);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.card h3 a {
+  color: inherit;
+  line-height: 0;
+}
+
+.card p {
+  margin: 0 0 0.75rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.1rem 0.75rem;
+  border-radius: 999px;
+  background: var(--chip);
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* blog */
+
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.posts li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.posts time {
+  min-width: 9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.posts a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.posts a:hover {
+  text-decoration: underline;
+}
+
+.post-head h1 {
+  font-size: 2.5rem;
+}
+
+.post-head time {
+  color: var(--muted);
+  font-size: 1.25rem;
+}
+
+.post-head hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 1rem 0 2rem;
+}
+
+/* markdown content */
+
+.prose {
+  overflow-wrap: break-word;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin: 2rem 0 0.75rem;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+}
+
+.prose h3 {
+  font-size: 1.35rem;
+}
+
+.prose blockquote {
+  margin: 1.25rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--line);
+  color: var(--muted);
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2rem 0;
+}
+
+.prose pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 0.875rem/1.5 var(--mono);
+}
+
+.prose pre:not(.astro-code) {
+  background: var(--chip);
+}
+
+.prose :not(pre) > code {
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background: var(--chip);
+  font: 0.9em var(--mono);
+}
+
+@media print {
+  @page {
+    margin: 0.45in;
+  }
+}

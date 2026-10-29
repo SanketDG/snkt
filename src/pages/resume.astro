@@ -1,0 +1,344 @@
+---
+import Base from "../layouts/Base.astro"
+
+const experience = [
+  {
+    title: "Persistent Systems",
+    meta: "Aug 2018 – Present • Full Stack Developer • Pune, India",
+    points: [
+      "Developed a Chrome extension that brought an archaic email encryption product to the cloud, on modern web technologies. Webpack, ES6, HTML/CSS.",
+      "Developed an Outlook Web Addin for Outlook suite of products and refactored to use modern tooling and bundling techniques to improve performance by 4x. The addin code was deployed to AWS Cloudfront CDN served over HTTP/2, which led to an additional boost in performance.",
+      "Separated a monolithic Django codebase that was consumed by the above two client side applications into two smaller services and containerized them using Docker improving both the development and deploying experience.",
+      "Refactored I/O intensive code in the Django application to be processed by an asynchronous worker queue that used Redis to store tasks and green threads to interleave tasks which resulted in 17x improvement over response times.",
+      "Implemented centralized logging for all web services by writing an intermediary web service in Go that publishes all logs to ElasticSearch and visualized important data points using Kibana.",
+      "Developed, tested and migrated a legacy application to modern web technologies and maintained full compatibility with the legacy application. TypeScript and OpenUI5.",
+    ],
+  },
+  {
+    title: "Google Summer of Code",
+    meta: "Apr 2016 - Aug 2016 • Open Source Contract Developer",
+    points: [
+      "Participated with the Python Software Foundation under coala (https://coala.io)",
+      "Created a language independent documentation extraction system.",
+      "Wrote a language independent plugin that automatically fixes inline code comments and documentation.",
+      "Gained maintainer access for contribution to the project.",
+    ],
+  },
+]
+
+const achievements = [
+  {
+    title: "Mentor for Google Summer of Code 2017 and 2020.",
+    text: "Mentored a GSoC student for the coala and Anita-B organization in respective years.",
+  },
+  {
+    title: "Runner up at HackerEarth IndiaHacks Open Source Hackathon",
+    text: "Contributed to various open source projects to reach the leaderboard on the basis of difficulty of issues triaged.",
+  },
+]
+
+const skills = [
+  { title: "Proficient In", items: ["Python", "Javascript"] },
+  { title: "Frameworks", items: ["Django", "Flask", "React"] },
+  {
+    title: "Tools • Databases",
+    items: ["Webpack", "Redis", "Docker", "Git", "Elastic (ELK)"],
+  },
+  { title: "Other", items: ["PHP", "Node.js", "Go"] },
+]
+
+const pulls = (repo: string) =>
+  `https://github.com/${repo}/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged`
+---
+
+<Base title="Resume" description="Resume of Sanket Dasgupta, full stack developer.">
+  <div class="resume">
+    <header>
+      <h1>Sanket Dasgupta</h1>
+      <p>
+        <a href="https://snkt.tech">snkt.tech ↗</a> • <a href="mailto:sanketdasgupta@gmail.com">sanketdasgupta@gmail.com</a> • <a href="https://github.com/SanketDG">github.com/SanketDG ↗</a>
+      </p>
+    </header>
+
+    <div class="cols">
+      <section>
+        <h2>Experience</h2>
+        {
+          experience.map((job) => (
+            <div class="entry">
+              <h3>{job.title}</h3>
+              <p class="sub">{job.meta}</p>
+              <ul class="points">
+                {job.points.map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </section>
+
+      <section>
+        <h2>Achievements</h2>
+        {
+          achievements.map((item) => (
+            <div class="entry">
+              <h3 class="caps">{item.title}</h3>
+              <p class="sub">{item.text}</p>
+            </div>
+          ))
+        }
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="entry">
+          <h3><a href="https://github.com/SanketDG/djurl">djurl ↗</a></h3>
+          <p class="sub">Python • Django • Docker</p>
+          <p>
+            A minimal self-hosted URL shortener built using Django with modern tooling for Python
+            and best practices in mind.
+          </p>
+          <p>
+            This is also the reference application for{" "}
+            <a href="https://github.com/SanketDG/djurl/tree/master/modern-django-tooling"
+              >modern-django-tooling ↗</a
+            >
+          </p>
+        </div>
+        <div class="entry">
+          <h3><a href="https://github.com/SanketDG/khol">khol (খোল) ↗</a></h3>
+          <p class="sub">C</p>
+          <p>A minimalistic shell written in C with support for redirection, history and pipes.</p>
+        </div>
+        <div class="entry">
+          <h3><a href="https://github.com/SanketDG/extenstart">extenstart ↗</a></h3>
+          <p class="sub">Javascript</p>
+          <p>Opinionated Boilerplate for Web Extensions</p>
+        </div>
+        <div class="entry">
+          <h3><a href="https://github.com/awsomsauce/hugo-theme-sauce">hugo-theme-sauce ↗</a></h3>
+          <p class="sub">Hugo • Tachyons • Netlify</p>
+          <p>The Hugo theme that runs <a href="https://awsomsauce.tech">awsomsauce.tech!</a></p>
+        </div>
+        <div class="entry">
+          <h3>Open Source Contributions</h3>
+          <p>
+            Contributions to <a href={pulls("networkx/networkx")}>NetworkX ↗</a> (a graph library
+            for Python), <a href={pulls("coala/coala")}>coala ↗</a> and{" "}
+            <a href={pulls("coala/coala-bears")}>coala-bears ↗</a> (an opinionated language agnostic
+            linting tool), <a href={pulls("PostHog/PostHog")}>PostHog ↗</a> (Open Source Product
+            Analytics), <a href={pulls("pypa/bandersnatch")}>PyPA ↗</a> (Python Packaging
+            Authority) and{" "}
+            <a href="https://github.com/search?l=&q=is%3Apr+author%3ASanketDG+is%3Amerged&type=Issues"
+              >many more ↗</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        {
+          skills.map((group) => (
+            <div class="entry">
+              <h3>{group.title}</h3>
+              <ul class="chips">
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="entry">
+          <h3>Academy of Technology</h3>
+          <p class="sub">2014 – 2018 • Computer Science • Kolkata, India</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .resume {
+    max-width: 66rem;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0 0 0.25rem;
+    font: 600 1.75rem var(--sans);
+  }
+
+  header p {
+    margin: 0;
+  }
+
+  .cols {
+    column-gap: 2.25rem;
+  }
+
+  @media (min-width: 52rem) {
+    .cols {
+      columns: 2;
+    }
+  }
+
+  section {
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    margin: 0 0 0.75rem;
+    break-after: avoid;
+    font: 700 1.1rem var(--sans);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .entry {
+    margin-bottom: 1rem;
+    break-inside: avoid;
+  }
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font: 600 1.05rem/1.3 var(--sans);
+  }
+
+  h3 a {
+    color: inherit;
+  }
+
+  h3.caps {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .sub {
+    color: var(--muted);
+  }
+
+  .points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .points li {
+    position: relative;
+    margin-top: 0.5rem;
+    padding-left: 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .points li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .chips li {
+    padding: 0 0.6rem;
+    border: 2px solid var(--fg);
+    font-size: 0.9rem;
+  }
+
+  @media print {
+    :global(.site-header),
+    :global(.site-footer) {
+      display: none;
+    }
+
+    :global(.wrap) {
+      max-width: none;
+      padding: 0;
+    }
+
+    header {
+      margin-bottom: 8pt;
+    }
+
+    header h1 {
+      font-size: 16pt;
+    }
+
+    .cols {
+      columns: 2;
+      column-gap: 0.3in;
+    }
+
+    section {
+      margin-bottom: 6pt;
+    }
+
+    h2 {
+      margin-bottom: 4pt;
+      font-size: 10pt;
+    }
+
+    h3 {
+      margin-bottom: 1pt;
+      font-size: 10pt;
+    }
+
+    h3.caps {
+      font-size: 9pt;
+    }
+
+    .entry {
+      margin-bottom: 6pt;
+    }
+
+    p,
+    .points li,
+    .chips li {
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+
+    p {
+      margin-bottom: 3pt;
+    }
+
+    .points li {
+      margin-top: 2.5pt;
+    }
+
+    .chips {
+      gap: 3pt;
+      margin-top: 3pt;
+    }
+
+    .chips li {
+      padding: 0 5pt;
+      border-width: 1.5px;
+    }
+  }
+</style>

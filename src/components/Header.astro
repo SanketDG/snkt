@@ -1,0 +1,42 @@
+---
+import Icon from "./Icon.astro"
+import { SITE } from "../site"
+
+const nav = [
+  { href: "/", label: "home" },
+  { href: "/projects", label: "projects" },
+  { href: "/resume", label: "resume" },
+  { href: "/blog", label: "blog" },
+]
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/"
+const isCurrent = (href: string) =>
+  href === "/" ? path === "/" : path === href || path.startsWith(`${href}/`)
+
+const socials = [
+  { name: "github", href: SITE.links.github },
+  { name: "twitter", href: SITE.links.twitter },
+  { name: "linkedin", href: SITE.links.linkedin },
+] as const
+---
+
+<header class="site-header">
+  <nav aria-label="Main">
+    {
+      nav.map(({ href, label }) => (
+        <a href={href} aria-current={isCurrent(href) ? "page" : undefined}>
+          {label}
+        </a>
+      ))
+    }
+    <span class="socials">
+      {
+        socials.map(({ name, href }) => (
+          <a href={href} aria-label={name} rel="me">
+            <Icon name={name} />
+          </a>
+        ))
+      }
+    </span>
+  </nav>
+</header>
