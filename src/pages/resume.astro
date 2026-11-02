@@ -1,62 +1,80 @@
 ---
 import Base from "../layouts/Base.astro"
 
+// Content mirrors resume.tex in github.com/SanketDG/resume. Text between ** ** renders bold.
 const experience = [
   {
-    title: "Persistent Systems",
-    meta: "Aug 2018 – Present • Full Stack Developer • Pune, India",
+    title: "Fynd (Acquired by Reliance)",
+    meta: "Mar 2021 – Present • SDE 3 • Bangalore, India",
     points: [
-      "Developed a Chrome extension that brought an archaic email encryption product to the cloud, on modern web technologies. Webpack, ES6, HTML/CSS.",
-      "Developed an Outlook Web Addin for Outlook suite of products and refactored to use modern tooling and bundling techniques to improve performance by 4x. The addin code was deployed to AWS Cloudfront CDN served over HTTP/2, which led to an additional boost in performance.",
-      "Separated a monolithic Django codebase that was consumed by the above two client side applications into two smaller services and containerized them using Docker improving both the development and deploying experience.",
-      "Refactored I/O intensive code in the Django application to be processed by an asynchronous worker queue that used Redis to store tasks and green threads to interleave tasks which resulted in 17x improvement over response times.",
-      "Implemented centralized logging for all web services by writing an intermediary web service in Go that publishes all logs to ElasticSearch and visualized important data points using Kibana.",
-      "Developed, tested and migrated a legacy application to modern web technologies and maintained full compatibility with the legacy application. TypeScript and OpenUI5.",
+      "Built and scaled Serviceability and Logistics services for multiple Reliance Jio E-Commerce projects (including Tira and Jiomart) from 0-1M users, **responsible for algorithmic store and shipment assignment, accurate delivery-date computation, and delivery-partner allocation** via partner APIs.",
+      "Led the implementation of **Rule Engines and Geographical Zones with CRUD APIs, functional execution, and UIs giving sellers customization over store, shipment, and delivery-partner selection.**",
+      "Built a QuickCommerce PoC with **polygon-based serviceability that enabled Jiomart's 10-minute deliveries, then evolved into a multi-promise fulfillment engine supporting Quick Commerce, Rush, Same-Day, and Next-Day modes with flexible seller configurations**, adopted across Tira Express, Jiomart Quick, and Ajio Rush.",
+      "Architected Ajio's **Exchange Anything flow across Payments, Cart, OMS, and Serviceability in 10 days**, with multiple seller configurations and shipped end-to-end flows in both the Web (React) and Mobile (React Native) apps.",
+      "**Achieved 95% optimization in customer-facing Serviceability APIs** by implementing serialization improvements (orjson), validation migration (Pydantic), async Redis, HTTP session pooling, N+1 query fixes, and DB query batching. Layered in-memory caching (alru_cache) across all components on top of Redis and built a rule invalidation engine using Redis pub/sub.",
+      "Ported the **customer-facing layer of Serviceability from Python to Go, achieving 60% further latency reduction.** Rolled out incrementally using canary deployments, and ported E2E integration tests from the Python service to validate response parity, ensuring 100% compatibility before full cutover.",
+      "Mentored 15 team members across Reliance projects, **led code and solution reviews, drove QA and SRE alignment, and owned release coordination** for the platform powering all Reliance E-Commerce.",
+    ],
+  },
+  {
+    title: "Persistent Systems",
+    meta: "Aug 2018 – Feb 2021 • Software Engineer • Pune, India",
+    points: [
+      "Migrated an enterprise email product to the cloud via a Chrome Extension/Outlook Addin, and refactored the backend with async worker queues and Redis, achieving a 4x performance improvement.",
     ],
   },
   {
     title: "Google Summer of Code",
-    meta: "Apr 2016 - Aug 2016 • Open Source Contract Developer",
+    meta: "April 2016 – August 2016 • Open Source Developer",
     points: [
-      "Participated with the Python Software Foundation under coala (https://coala.io)",
-      "Created a language independent documentation extraction system.",
-      "Wrote a language independent plugin that automatically fixes inline code comments and documentation.",
-      "Gained maintainer access for contribution to the project.",
+      "Built language-independent documentation extraction and auto-fix tooling for the Python Software Foundation (coala).",
     ],
+  },
+]
+
+const skills = [
+  { title: "Proficient in", items: ["Python", "Go", "Javascript (ES6)", "Typescript"] },
+  { title: "Frameworks/Libraries", items: ["FastAPI", "Sanic", "Node.js", "Vue.js", "React.js"] },
+  { title: "Databases/Datastores", items: ["MongoDB", "Redis", "Kafka", "MySQL"] },
+  { title: "Tools", items: ["Webpack", "Docker", "Git"] },
+  { title: "Reliability", items: ["Kubernetes", "Prometheus", "Grafana", "GCP"] },
+]
+
+const projects = [
+  {
+    name: "djurl",
+    tech: "Python • Django • Docker",
+    link: "https://github.com/SanketDG/djurl",
+    text: "A minimal self-hosted URL shortener built with best practices for modern Python tooling around Django.",
+  },
+  {
+    name: "khol",
+    tech: "C",
+    link: "https://github.com/SanketDG/khol",
+    text: "A minimalistic shell written in C with support for redirection, history and pipes.",
   },
 ]
 
 const achievements = [
   {
-    title: "Mentor for Google Summer of Code 2017 and 2020.",
+    title: "Mentor for Google Summer of Code 2017 and 2020",
+    date: "May 2020",
     text: "Mentored a GSoC student for the coala and Anita-B organization in respective years.",
   },
   {
-    title: "Runner up at HackerEarth IndiaHacks Open Source Hackathon",
+    title: "2nd Place at HackerEarth IndiaHacks Open Source Hackathon",
+    date: "March 2016",
     text: "Contributed to various open source projects to reach the leaderboard on the basis of difficulty of issues triaged.",
   },
 ]
-
-const skills = [
-  { title: "Proficient In", items: ["Python", "Javascript"] },
-  { title: "Frameworks", items: ["Django", "Flask", "React"] },
-  {
-    title: "Tools • Databases",
-    items: ["Webpack", "Redis", "Docker", "Git", "Elastic (ELK)"],
-  },
-  { title: "Other", items: ["PHP", "Node.js", "Go"] },
-]
-
-const pulls = (repo: string) =>
-  `https://github.com/${repo}/pulls?q=is%3Apr+author%3ASanketDG+is%3Amerged`
 ---
 
-<Base title="Resume" description="Resume of Sanket Dasgupta, full stack developer.">
+<Base title="Resume" description="Resume of Sanket Dasgupta, software engineer.">
   <div class="resume">
     <header>
       <h1>Sanket Dasgupta</h1>
       <p>
-        <a href="https://snkt.tech">snkt.tech ↗</a> • <a href="mailto:sanketdasgupta@gmail.com">sanketdasgupta@gmail.com</a> • <a href="https://github.com/SanketDG">github.com/SanketDG ↗</a>
+        <a href="mailto:sanketdasgupta@gmail.com">sanketdasgupta@gmail.com</a> • India • <a href="https://github.com/SanketDG">github.com/SanketDG ↗</a> • <a href="https://snkt.vercel.app">snkt.vercel.app ↗</a>
       </p>
     </header>
 
@@ -70,71 +88,12 @@ const pulls = (repo: string) =>
               <p class="sub">{job.meta}</p>
               <ul class="points">
                 {job.points.map((point) => (
-                  <li>{point}</li>
+                  <li>{point.split("**").map((part, i) => (i % 2 ? <strong>{part}</strong> : part))}</li>
                 ))}
               </ul>
             </div>
           ))
         }
-      </section>
-
-      <section>
-        <h2>Achievements</h2>
-        {
-          achievements.map((item) => (
-            <div class="entry">
-              <h3 class="caps">{item.title}</h3>
-              <p class="sub">{item.text}</p>
-            </div>
-          ))
-        }
-      </section>
-
-      <section>
-        <h2>Projects</h2>
-        <div class="entry">
-          <h3><a href="https://github.com/SanketDG/djurl">djurl ↗</a></h3>
-          <p class="sub">Python • Django • Docker</p>
-          <p>
-            A minimal self-hosted URL shortener built using Django with modern tooling for Python
-            and best practices in mind.
-          </p>
-          <p>
-            This is also the reference application for{" "}
-            <a href="https://github.com/SanketDG/djurl/tree/master/modern-django-tooling"
-              >modern-django-tooling ↗</a
-            >
-          </p>
-        </div>
-        <div class="entry">
-          <h3><a href="https://github.com/SanketDG/khol">khol (খোল) ↗</a></h3>
-          <p class="sub">C</p>
-          <p>A minimalistic shell written in C with support for redirection, history and pipes.</p>
-        </div>
-        <div class="entry">
-          <h3><a href="https://github.com/SanketDG/extenstart">extenstart ↗</a></h3>
-          <p class="sub">Javascript</p>
-          <p>Opinionated Boilerplate for Web Extensions</p>
-        </div>
-        <div class="entry">
-          <h3><a href="https://github.com/awsomsauce/hugo-theme-sauce">hugo-theme-sauce ↗</a></h3>
-          <p class="sub">Hugo • Tachyons • Netlify</p>
-          <p>The Hugo theme that runs <a href="https://awsomsauce.tech">awsomsauce.tech!</a></p>
-        </div>
-        <div class="entry">
-          <h3>Open Source Contributions</h3>
-          <p>
-            Contributions to <a href={pulls("networkx/networkx")}>NetworkX ↗</a> (a graph library
-            for Python), <a href={pulls("coala/coala")}>coala ↗</a> and{" "}
-            <a href={pulls("coala/coala-bears")}>coala-bears ↗</a> (an opinionated language agnostic
-            linting tool), <a href={pulls("PostHog/PostHog")}>PostHog ↗</a> (Open Source Product
-            Analytics), <a href={pulls("pypa/bandersnatch")}>PyPA ↗</a> (Python Packaging
-            Authority) and{" "}
-            <a href="https://github.com/search?l=&q=is%3Apr+author%3ASanketDG+is%3Amerged&type=Issues"
-              >many more ↗</a
-            >
-          </p>
-        </div>
       </section>
 
       <section>
@@ -154,10 +113,37 @@ const pulls = (repo: string) =>
       </section>
 
       <section>
+        <h2>Projects</h2>
+        {
+          projects.map((project) => (
+            <div class="entry">
+              <h3><a href={project.link}>{project.name} ↗</a></h3>
+              <p class="sub">{project.tech}</p>
+              <p>{project.text}</p>
+            </div>
+          ))
+        }
+      </section>
+
+      <section>
+        <h2>Achievements</h2>
+        {
+          achievements.map((item) => (
+            <div class="entry">
+              <h3 class="caps">{item.title}</h3>
+              <p class="sub">{item.date}</p>
+              <p>{item.text}</p>
+            </div>
+          ))
+        }
+      </section>
+
+      <section>
         <h2>Education</h2>
         <div class="entry">
           <h3>Academy of Technology</h3>
-          <p class="sub">2014 – 2018 • Computer Science • Kolkata, India</p>
+          <p class="sub">B. Tech Computer Science • Kolkata, India • June 2018</p>
+          <p>GPA: 8.1</p>
         </div>
       </section>
     </div>
