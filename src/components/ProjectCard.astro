@@ -5,7 +5,7 @@ interface Props {
   name: string
   description: string
   tech?: string[]
-  link: string
+  link?: string
 }
 
 const { name, description, tech = [], link } = Astro.props
@@ -14,7 +14,7 @@ const { name, description, tech = [], link } = Astro.props
 <article class="card">
   <h3>
     {name}
-    <a href={link} aria-label={`${name} on GitHub`}><Icon name="github" size={20} /></a>
+    {link && <a href={link} aria-label={`${name} on GitHub`}><Icon name="github" size={20} /></a>}
   </h3>
   <p>{description}</p>
   {

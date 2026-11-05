@@ -1,25 +1,99 @@
 ---
+import { getCollection } from "astro:content"
 import Base from "../layouts/Base.astro"
+import ProjectCard from "../components/ProjectCard.astro"
 
-const updated = "9th November, 2020"
+const featured = [
+  {
+    name: "SpecWatch",
+    description:
+      "Checks a service against its OpenAPI contract: finds its routes, replays the contract's examples against the running service, validates every response and reports coverage for CI.",
+    tech: ["Go", "OpenAPI", "CI"],
+  },
+  {
+    name: "mac-remote",
+    description:
+      "Turns your phone into a trackpad, keyboard and media remote for your Mac over Wi-Fi. Pure Python standard library, nothing to install.",
+    tech: ["Python", "macOS", "launchd"],
+  },
+  {
+    name: "ai-skills",
+    description:
+      "Portable skills for AI coding agents: safe repo syncing, and local dev servers that start at login with friendly .local names.",
+    tech: ["Claude Code", "Codex", "Bash"],
+  },
+  {
+    name: "this site",
+    description:
+      "Rebuilt from Gatsby to Astro: static HTML, about 70 KB for the whole site and almost no JavaScript.",
+    tech: ["Astro", "Vercel"],
+    link: "https://github.com/SanketDG/snkt",
+  },
+]
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+const latest = posts.slice(0, 3)
+const day = new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric", timeZone: "UTC" })
+const built = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date())
 ---
 
 <Base title="Home">
-  <h1>Hi.</h1>
-  <h2>I am Sanket.</h2>
+  <section class="hero">
+    <p class="eyebrow">Software engineer</p>
+    <h1>Hi, I'm Sanket.</h1>
+    <p class="lede">
+      I build serviceability and logistics systems for Reliance's e-commerce platforms: delivery promises, rule
+      engines and quick commerce, mostly in Python and Go.
+    </p>
+    <p class="actions">
+      <a class="button" href="/resume">Resume</a>
+    </p>
+  </section>
 
-  <p class="lede">I am a Full Stack Developer. I build things for computers.</p>
+  <section>
+    <h2 class="section-title">Right now</h2>
+    <ul class="now">
+      <li><strong>At work</strong> Fynd, SDE 3: making delivery estimates fast and accurate across Tira, Jiomart and Ajio.</li>
+      <li><strong>On the side</strong> SpecWatch, an OpenAPI contract runner in Go, and tooling for working with AI coding agents.</li>
+      <li><strong>This site</strong> Rebuilt on Astro. Writing coming next.</li>
+    </ul>
+    <p class="meta">Updated {built}</p>
+  </section>
 
-  <p class="display">What am I doing right now?</p>
+  <section>
+    <div class="section-head">
+      <h2 class="section-title">Selected work</h2>
+      <a href="/projects">All projects →</a>
+    </div>
+    <ul class="cards cards-2">
+      {
+        featured.map((project) => (
+          <li>
+            <ProjectCard {...project} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 
-  <p>
-    I am working on <a href="https://github.com/SanketDG/extenstart/">extenstart</a>,
-    a modern web extension scaffolding and workflow tool.
-  </p>
-  <p>
-    I have just started <a href="https://github.com/SanketDG/learn-graphs">learn-graphs</a>,
-    an interactive tutorial about graph theory and its applications.
-  </p>
-
-  <p class="meta">— Last Updated {updated}</p>
+  {
+    latest.length >= 3 && (
+      <section>
+        <div class="section-head">
+          <h2 class="section-title">Writing</h2>
+          <a href="/blog">All posts →</a>
+        </div>
+        <ul class="posts">
+          {latest.map((post) => (
+            <li>
+              <time datetime={post.data.date.toISOString()}>{day.format(post.data.date)}</time>
+              <a href={post.data.path}>{post.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 </Base>

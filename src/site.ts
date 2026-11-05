@@ -2,7 +2,7 @@ export const SITE = {
   title: "snkt",
   author: "Sanket Dasgupta",
   description:
-    "Sanket Dasgupta, full stack developer. Projects, resume and writing.",
+    "Sanket Dasgupta, software engineer. Projects, resume and writing.",
   twitter: "@SanketDG",
   links: {
     github: "https://github.com/SanketDG",
