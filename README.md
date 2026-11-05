@@ -2,7 +2,7 @@
 
 Sanket Dasgupta's personal site: home, projects, resume and blog.
 
-Built with [Astro](https://astro.build) as plain static HTML. There are no web fonts and no CSS framework, and the only client-side JavaScript is a few lines on the resume page that assemble the email address in the browser, so it never appears in the page source; the whole site is roughly 70 KB.
+Built with [Astro](https://astro.build) as plain static HTML. There are no web fonts and no CSS framework, and the only client-side JavaScript is a few lines on the resume page that assemble the email address in the browser, so it never appears in the page source. The pages total about 55 KB, plus a 53 KB resume PDF.
 
 ## Develop
 
@@ -25,8 +25,21 @@ npm run preview  # serve dist/ locally
 | `src/components/`, `src/layouts/` | Header, footer, project card, icons and the base layout |
 | `src/styles/global.css` | All site styles, with light and dark themes |
 | `src/site.ts` | Site title, description and social links |
+| `src/data/projects.ts` | The project list, shared by the home page and `/projects` |
+| `public/resume.pdf` | The downloadable resume (generated, see below) |
+| `scripts/build-resume-pdf.sh` | Builds `public/resume.pdf` from the resume repository |
 
 The resume has print styles and fits on one Letter or A4 page.
+
+## Resume PDF
+
+`public/resume.pdf` is a copy of the resume with the email address replaced by LinkedIn, so the public file does not carry the address. It is built from `resume.tex` in the `SanketDG/resume` repository, which stays the source of truth, and it does not update itself. After changing the resume, rebuild it from a checkout of that repository and commit the result:
+
+```bash
+scripts/build-resume-pdf.sh ../resume
+```
+
+The script needs `xelatex` and `pdftotext`, stops if the contact line in `resume.tex` has changed, and refuses to write the PDF if an `@` appears in its text.
 
 ## Deploy
 

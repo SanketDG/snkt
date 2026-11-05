@@ -77,6 +77,7 @@ const achievements = [
       <p>
         <ObfuscatedEmail user="sanketdasgupta" domain="gmail.com" fallback="https://www.linkedin.com/in/sanketdg" /> • India • <a href="https://github.com/SanketDG">github.com/SanketDG ↗</a> • <a href="https://snkt.vercel.app">snkt.vercel.app ↗</a>
       </p>
+      <p class="pdf"><a href="/resume.pdf">Download PDF</a></p>
     </header>
 
     <div class="cols">
@@ -171,6 +172,10 @@ const achievements = [
     margin: 0;
   }
 
+  header p.pdf {
+    margin-top: 0.4rem;
+  }
+
   .cols {
     column-gap: 2.25rem;
   }
@@ -259,7 +264,8 @@ const achievements = [
 
   @media print {
     :global(.site-header),
-    :global(.site-footer) {
+    :global(.site-footer),
+    .pdf {
       display: none;
     }
 

@@ -29,7 +29,7 @@ export const recent: Project[] = [
   {
     name: "this site",
     description:
-      "Rebuilt from Gatsby to Astro: static HTML, about 70 KB for the whole site and almost no JavaScript.",
+      "Rebuilt from Gatsby to Astro: static HTML, about 55 KB for all the pages and almost no JavaScript.",
     tech: ["Astro", "Vercel"],
     link: "https://github.com/SanketDG/snkt",
   },
