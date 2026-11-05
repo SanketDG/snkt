@@ -2,7 +2,7 @@
 
 Sanket Dasgupta's personal site: home, projects, resume and blog.
 
-Built with [Astro](https://astro.build) as plain static HTML. There is no client-side JavaScript, no web fonts and no CSS framework; the whole site is roughly 70 KB.
+Built with [Astro](https://astro.build) as plain static HTML. There are no web fonts and no CSS framework, and the only client-side JavaScript is a few lines on the resume page that assemble the email address in the browser, so it never appears in the page source; the whole site is roughly 70 KB.
 
 ## Develop
 

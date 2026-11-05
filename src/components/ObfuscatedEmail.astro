@@ -1,0 +1,26 @@
+---
+// Keeps the address out of the page source so scrapers that only read HTML never see it.
+// The two halves are joined in the browser, so it still works as a mailto link and prints.
+// Without JavaScript the link falls back to LinkedIn.
+interface Props {
+  user: string
+  domain: string
+  fallback: string
+}
+
+const { user, domain, fallback } = Astro.props
+---
+
+<a data-u={user} data-d={domain} href={fallback} aria-label="Email (needs JavaScript)">email</a>
+<script is:inline>
+  ;(function () {
+    var links = document.querySelectorAll("a[data-u]")
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i]
+      var address = a.getAttribute("data-u") + "@" + a.getAttribute("data-d")
+      a.href = "mailto:" + address
+      a.textContent = address
+      a.removeAttribute("aria-label")
+    }
+  })()
+</script>

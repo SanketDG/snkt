@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro"
+import ObfuscatedEmail from "../components/ObfuscatedEmail.astro"
 
 // Content mirrors resume.tex in github.com/SanketDG/resume. Text between ** ** renders bold.
 const experience = [
@@ -74,7 +75,7 @@ const achievements = [
     <header>
       <h1>Sanket Dasgupta</h1>
       <p>
-        <a href="mailto:sanketdasgupta@gmail.com">sanketdasgupta@gmail.com</a> • India • <a href="https://github.com/SanketDG">github.com/SanketDG ↗</a> • <a href="https://snkt.vercel.app">snkt.vercel.app ↗</a>
+        <ObfuscatedEmail user="sanketdasgupta" domain="gmail.com" fallback="https://www.linkedin.com/in/sanketdg" /> • India • <a href="https://github.com/SanketDG">github.com/SanketDG ↗</a> • <a href="https://snkt.vercel.app">snkt.vercel.app ↗</a>
       </p>
     </header>
 
