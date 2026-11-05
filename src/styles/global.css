@@ -400,3 +400,7 @@ main > section + section {
 .cards-2 {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
+
+.cards + h2 {
+  margin-top: 3rem;
+}

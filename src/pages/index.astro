@@ -2,34 +2,7 @@
 import { getCollection } from "astro:content"
 import Base from "../layouts/Base.astro"
 import ProjectCard from "../components/ProjectCard.astro"
-
-const featured = [
-  {
-    name: "SpecWatch",
-    description:
-      "Checks a service against its OpenAPI contract: finds its routes, replays the contract's examples against the running service, validates every response and reports coverage for CI.",
-    tech: ["Go", "OpenAPI", "CI"],
-  },
-  {
-    name: "mac-remote",
-    description:
-      "Turns your phone into a trackpad, keyboard and media remote for your Mac over Wi-Fi. Pure Python standard library, nothing to install.",
-    tech: ["Python", "macOS", "launchd"],
-  },
-  {
-    name: "ai-skills",
-    description:
-      "Portable skills for AI coding agents: safe repo syncing, and local dev servers that start at login with friendly .local names.",
-    tech: ["Claude Code", "Codex", "Bash"],
-  },
-  {
-    name: "this site",
-    description:
-      "Rebuilt from Gatsby to Astro: static HTML, about 70 KB for the whole site and almost no JavaScript.",
-    tech: ["Astro", "Vercel"],
-    link: "https://github.com/SanketDG/snkt",
-  },
-]
+import { recent as featured } from "../data/projects"
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
